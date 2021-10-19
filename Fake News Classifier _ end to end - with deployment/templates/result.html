@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname"; style="text-align: center">
+			NLP App
+		</div>
+		<h2 style="text-align: center">Fake News Detection</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Fake or True</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == 1%}
+	<h2 style="color:red;text-align: center">It's a True News</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:blue;text-align: center">It's a Fake News</h2>
+	{% endif %}
+
+    	
+
+
+	</div>
+
+</body>
+</html>

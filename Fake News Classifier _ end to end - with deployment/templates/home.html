@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname" style="text-align: center">
+			NLP App with Flask
+		</div>
+		<h2 style="text-align: center">Fake News Detection</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container" align = "center">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+		<p style="text-align: center">Enter the News Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="title" rows="6" cols="50"></textarea>
+		<br/>
+
+		<input type="submit" class="btn-info" value="predict" style="text-align: center">
+		
+		
+		
+		
+		
+		
+	</form>
+		
+	
+
+
+</body>
+</html>
